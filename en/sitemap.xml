@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ZihaoLin111.github.io/en/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ZihaoLin111.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ZihaoLin111.github.io/en/"
+                />
+  </url><url>
     <loc>https://ZihaoLin111.github.io/en/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -28,19 +41,6 @@
                 href="https://ZihaoLin111.github.io/en/page/"
                 />
   </url><url>
-    <loc>https://ZihaoLin111.github.io/en/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://ZihaoLin111.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ZihaoLin111.github.io/en/"
-                />
-  </url><url>
     <loc>https://ZihaoLin111.github.io/en/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -64,6 +64,30 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ZihaoLin111.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://ZihaoLin111.github.io/en/links/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ZihaoLin111.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ZihaoLin111.github.io/en/links/"
+                />
+  </url><url>
+    <loc>https://ZihaoLin111.github.io/en/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ZihaoLin111.github.io/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ZihaoLin111.github.io/en/search/"
                 />
   </url><url>
     <loc>https://ZihaoLin111.github.io/en/tags/</loc>
