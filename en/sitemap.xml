@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ZihaoLin111.github.io/en/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>https://ZihaoLin111.github.io/en/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://ZihaoLin111.github.io/%E5%85%B3%E4%BA%8E/"
+                href="https://ZihaoLin111.github.io/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ZihaoLin111.github.io/en/about/"
+                href="https://ZihaoLin111.github.io/en/archives/"
                 />
   </url><url>
     <loc>https://ZihaoLin111.github.io/en/page/</loc>
@@ -39,6 +39,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ZihaoLin111.github.io/en/"
+                />
+  </url><url>
+    <loc>https://ZihaoLin111.github.io/en/about/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ZihaoLin111.github.io/%E5%85%B3%E4%BA%8E/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ZihaoLin111.github.io/en/about/"
                 />
   </url><url>
     <loc>https://ZihaoLin111.github.io/en/categories/</loc>
