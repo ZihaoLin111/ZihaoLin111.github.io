@@ -29,17 +29,17 @@
 &lt;p&gt;CS61A的作业我认为也是课程的亮点之一，刚刚完成了hw01和lab01，承认这两者作为第一天的作业并不是很难，但也绝不是丝毫不要思考的简单题目(我做hw01的时候就因为轻视了题目难度，结果每道题ok的时候都报了错哈哈)&lt;/p&gt;
 &lt;p&gt;记录一道自己在lab01的quiz里面做错的题&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Q: How do you prevent the ok autograder from interpreting print statements as output?
-Choose the number of the correct choice:
-0 ) You don&amp;rsquo;t need to do anything, ok only looks at returned values, not printed values
-1 ) Print with &amp;lsquo;DEBUG:&amp;rsquo; at the front of the outputted line
-2 ) Print with # at the front of the outputted line&lt;/p&gt;
+&lt;p&gt;Q: How do you prevent the ok autograder from interpreting print statements as output?&lt;/p&gt;
+&lt;p&gt;Choose the number of the correct choice:&lt;/p&gt;
+&lt;p&gt;0 ) You don&amp;rsquo;t need to do anything, ok only looks at returned values, not printed values&lt;/p&gt;
+&lt;p&gt;1 ) Print with &amp;lsquo;DEBUG:&amp;rsquo; at the front of the outputted line&lt;/p&gt;
+&lt;p&gt;2 ) Print with # at the front of the outputted line&lt;/p&gt;
 &lt;p&gt;correct answer: 1 )&lt;/p&gt;
 &lt;p&gt;来自ChatGPT的解答：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;输入输出机制
-返回值检查： ok autograder 会检查程序的返回值来判断是否正确执行。例如，作业中可能有一个函数 add(a, b)，它应该返回 a + b 的值。评分系统会调用该函数并验证返回值是否与预期一致。
-打印输出： 默认情况下，ok autograder 会忽略 print 语句的输出，因为它只关心返回值。如果有调试信息打印出来，最好使用特殊前缀（如 DEBUG:）或者注释符号（如 #），以避免误判为程序的正常输出。&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
+&lt;p&gt;输入输出机制&lt;/p&gt;
+&lt;p&gt;返回值检查： ok autograder 会检查程序的返回值来判断是否正确执行。例如，作业中可能有一个函数 add(a, b)，它应该返回 a + b 的值。评分系统会调用该函数并验证返回值是否与预期一致。&lt;/p&gt;
+&lt;p&gt;打印输出： 默认情况下，ok autograder 会忽略 print 语句的输出，因为它只关心返回值。如果有调试信息打印出来，最好使用特殊前缀（如 DEBUG:）或者注释符号（如 #），以避免误判为程序的正常输出。&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
