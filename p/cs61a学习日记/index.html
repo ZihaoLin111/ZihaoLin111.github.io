@@ -272,7 +272,39 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#july-4-2025">July 4, 2025</a></li>
+    <li><a href="#july-6-2025">July 6, 2025</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -331,7 +363,7 @@
     >CS61A-Assignments</a></p>
 <p>课程视频:<a class="link" href="https://www.bilibili.com/video/BV1sy411z7nA/?vd_source=3bc4632ebc321d6858012322cc369765"  target="_blank" rel="noopener"
     >Spring2024</a></p>
-<h2 id="july-42025">July 4,2025
+<h2 id="july-4-2025">July 4, 2025
 </h2><p>准确来说，今天并不是开始学习的第一天，再此之前已经学习了Lecture1和Lecture2的课程，今天在忙完高考志愿填报的事后终于闲了下来，于是便开始以日记的形式记录学习过程。</p>
 <p>今天听了Lecture3 Control的课程，这段时间学习下来我认为CS61A不同于我以往在中学学习的计算机课程最大的不同是CS61A着重于why，也就是这段代码的实现经历了什么；而中学时的课程更多的是how，教会学生如何实现便点到为止，而为何实现却很少提及，大多考自己理解，而学测也不会考为何实现。</p>
 <p>CS61A的作业我认为也是课程的亮点之一，刚刚完成了hw01和lab01，承认这两者作为第一天的作业并不是很难，但也绝不是丝毫不要思考的简单题目(我做hw01的时候就因为轻视了题目难度，结果每道题ok的时候都报了错哈哈)</p>
@@ -348,6 +380,46 @@
 <p>输入输出机制</p>
 <p>返回值检查： ok autograder 会检查程序的返回值来判断是否正确执行。例如，作业中可能有一个函数 add(a, b)，它应该返回 a + b 的值。评分系统会调用该函数并验证返回值是否与预期一致。</p>
 <p>打印输出： 默认情况下，ok autograder 会忽略 print 语句的输出，因为它只关心返回值。如果有调试信息打印出来，最好使用特殊前缀（如 DEBUG:）或者注释符号（如 #），以避免误判为程序的正常输出。</p></blockquote></blockquote>
+<h2 id="july-6-2025">July 6, 2025
+</h2><p>昨天听了Lecture 4 Higher-Order Functions然后顺手把hw02做了，后来考虑时间已晚于是就把project hog放在了第二天</p>
+<p>project hog做了5个多小时，但是在读代码和写代码的过程中感觉自己的理解代码的能力提升了很多；而且完成这个项目，然后成功运行之后感受到了一种前所未有的成就感。我想这两点是CS61A作为UC Berkeley大一课程所能很大程度帮助提升学生能力的地方，阅读高质量的代码十分有益于计算机新手，同时完成项目的成就感能够激励我们继续后面的学习</p>
+<p>另外值得一提的是hw02中的一些题目中解法为Curring，这是我之前从未见到的，也是我在这个lecture收获最大的，不过这几道题我最初并没能想到Curring的解法于是使用了return一个判断的思路</p>
+<p>e.g.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def summation_using_accumulate(n, term):
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;Returns the sum: term(1) + ... + term(n), using accumulate.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &gt;&gt;&gt; summation_using_accumulate(5, square) # square(1) + square(2) + ... + square(4) + square(5)
+</span></span><span class="line"><span class="cl">    55
+</span></span><span class="line"><span class="cl">    &gt;&gt;&gt; summation_using_accumulate(5, triple) # triple(1) + triple(2) + ... + triple(4) + triple(5)
+</span></span><span class="line"><span class="cl">    45
+</span></span><span class="line"><span class="cl">    &gt;&gt;&gt; # This test checks that the body of the function is just a return statement.
+</span></span><span class="line"><span class="cl">    &gt;&gt;&gt; import inspect, ast
+</span></span><span class="line"><span class="cl">    &gt;&gt;&gt; [type(x).__name__ for x in ast.parse(inspect.getsource(summation_using_accumulate)).body[0].body]
+</span></span><span class="line"><span class="cl">    [&#39;Expr&#39;, &#39;Return&#39;]
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    return  n &gt; 0 and term(n) + summation_using_accumulate(n - 1, term)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断n &gt; 0 可以限制递归的边界，而当判断为False时，就会返回0的值，前一级的结果就会加0。自认为也是一种解决方法</p>
+<blockquote>
+<p>后面几天计划出去旅游，学习估计得暂停几天，期间在飞机上路途中打算听一下3b1b的微积分视频，为后面学习MIT18.01/18.02: Calculus做准备</p></blockquote>
 
 </section>
 

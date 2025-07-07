@@ -23,7 +23,7 @@
     &gt;CS61A-Assignments&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;课程视频:&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1sy411z7nA/?vd_source=3bc4632ebc321d6858012322cc369765&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Spring2024&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;july-42025&#34;&gt;July 4,2025
+&lt;h2 id=&#34;july-4-2025&#34;&gt;July 4, 2025
 &lt;/h2&gt;&lt;p&gt;准确来说，今天并不是开始学习的第一天，再此之前已经学习了Lecture1和Lecture2的课程，今天在忙完高考志愿填报的事后终于闲了下来，于是便开始以日记的形式记录学习过程。&lt;/p&gt;
 &lt;p&gt;今天听了Lecture3 Control的课程，这段时间学习下来我认为CS61A不同于我以往在中学学习的计算机课程最大的不同是CS61A着重于why，也就是这段代码的实现经历了什么；而中学时的课程更多的是how，教会学生如何实现便点到为止，而为何实现却很少提及，大多考自己理解，而学测也不会考为何实现。&lt;/p&gt;
 &lt;p&gt;CS61A的作业我认为也是课程的亮点之一，刚刚完成了hw01和lab01，承认这两者作为第一天的作业并不是很难，但也绝不是丝毫不要思考的简单题目(我做hw01的时候就因为轻视了题目难度，结果每道题ok的时候都报了错哈哈)&lt;/p&gt;
@@ -40,6 +40,46 @@
 &lt;p&gt;输入输出机制&lt;/p&gt;
 &lt;p&gt;返回值检查： ok autograder 会检查程序的返回值来判断是否正确执行。例如，作业中可能有一个函数 add(a, b)，它应该返回 a + b 的值。评分系统会调用该函数并验证返回值是否与预期一致。&lt;/p&gt;
 &lt;p&gt;打印输出： 默认情况下，ok autograder 会忽略 print 语句的输出，因为它只关心返回值。如果有调试信息打印出来，最好使用特殊前缀（如 DEBUG:）或者注释符号（如 #），以避免误判为程序的正常输出。&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;july-6-2025&#34;&gt;July 6, 2025
+&lt;/h2&gt;&lt;p&gt;昨天听了Lecture 4 Higher-Order Functions然后顺手把hw02做了，后来考虑时间已晚于是就把project hog放在了第二天&lt;/p&gt;
+&lt;p&gt;project hog做了5个多小时，但是在读代码和写代码的过程中感觉自己的理解代码的能力提升了很多；而且完成这个项目，然后成功运行之后感受到了一种前所未有的成就感。我想这两点是CS61A作为UC Berkeley大一课程所能很大程度帮助提升学生能力的地方，阅读高质量的代码十分有益于计算机新手，同时完成项目的成就感能够激励我们继续后面的学习&lt;/p&gt;
+&lt;p&gt;另外值得一提的是hw02中的一些题目中解法为Curring，这是我之前从未见到的，也是我在这个lecture收获最大的，不过这几道题我最初并没能想到Curring的解法于是使用了return一个判断的思路&lt;/p&gt;
+&lt;p&gt;e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;def summation_using_accumulate(n, term):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;Returns the sum: term(1) + ... + term(n), using accumulate.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; summation_using_accumulate(5, square) # square(1) + square(2) + ... + square(4) + square(5)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    55
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; summation_using_accumulate(5, triple) # triple(1) + triple(2) + ... + triple(4) + triple(5)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    45
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; # This test checks that the body of the function is just a return statement.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; import inspect, ast
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; [type(x).__name__ for x in ast.parse(inspect.getsource(summation_using_accumulate)).body[0].body]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    [&amp;#39;Expr&amp;#39;, &amp;#39;Return&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return  n &amp;gt; 0 and term(n) + summation_using_accumulate(n - 1, term)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断n &amp;gt; 0 可以限制递归的边界，而当判断为False时，就会返回0的值，前一级的结果就会加0。自认为也是一种解决方法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面几天计划出去旅游，学习估计得暂停几天，期间在飞机上路途中打算听一下3b1b的微积分视频，为后面学习MIT18.01/18.02: Calculus做准备&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
